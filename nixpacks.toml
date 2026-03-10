@@ -1,0 +1,9 @@
+[variables]
+    NIXPACKS_PHP_VERSION = '8.3'
+    COMPOSER_INSTALL_FLAGS = '--ignore-platform-reqs --no-scripts --optimize-autoloader --no-interaction'
+    NIXPACKS_NO_NODEJS = '1'
+
+
+[phases.install]
+    dependsOn = ['setup']
+    cmds = ['composer install $COMPOSER_INSTALL_FLAGS']
